@@ -1,6 +1,5 @@
 <template>
-	<h1 class="font-bold text-3xl">Home</h1>
-
+	<h1>Settings</h1>
 	<Nav/>
 	
 </template>
