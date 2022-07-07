@@ -21957,7 +21957,17 @@ __webpack_require__.r(__webpack_exports__);
   }
 });
 
-_inertiajs_progress__WEBPACK_IMPORTED_MODULE_4__.InertiaProgress.init();
+_inertiajs_progress__WEBPACK_IMPORTED_MODULE_4__.InertiaProgress.init({
+  // The delay after which the progress bar will
+  // appear during navigation, in milliseconds.
+  delay: 100,
+  // The color of the progress bar.
+  color: '#29d',
+  // Whether to include the default NProgress styles.
+  includeCSS: true,
+  // Whether the NProgress spinner will be shown.
+  showSpinner: true
+});
 
 /***/ }),
 
