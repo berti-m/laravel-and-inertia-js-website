@@ -14,7 +14,6 @@
 
 <script setup>
 	import Layout from "../Shared/Layout"
-	import { Link } from "@inertiajs/inertia-vue3";
 	defineProps({
 		time: String
 	})

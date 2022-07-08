@@ -18,6 +18,5 @@
 </template>
 
 <script setup>
-	import { Link } from "@inertiajs/inertia-vue3";
 	import NavLink from "./NavLink";
 </script>
