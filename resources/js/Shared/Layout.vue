@@ -1,4 +1,7 @@
 <template>
+	<Head>
+		<meta charset="utf-8" name="description" content="Hello World" head-key="description">
+	</Head>
 	<section class="flex p-3 rounded-lg bg-gray-200 justify-between text-lg border border-black mb-4">
 		<span class="flex items-center space-x-4">
 			<span>
