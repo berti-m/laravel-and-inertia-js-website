@@ -3,9 +3,14 @@ import './../css/app.css';
 
 import { createApp, h } from 'vue'
 import { createInertiaApp, Link } from '@inertiajs/inertia-vue3'
+import Layout from "./Shared/Layout";
 
 createInertiaApp({
-  resolve: name => require(`./Pages/${name}`),
+  resolve: name => {
+    let page = require(`./Pages/${name}`).default;
+    page.layout ??= Layout;
+    return page;
+  },
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .component('Link', Link)
