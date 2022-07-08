@@ -10,12 +10,15 @@
 	</li>
 </template>
 
-<script setup>
-	defineProps({
-		href: String,
-		active: {
-			type: Boolean,
-			value: false
+
+<script>
+	export default {
+		props: {
+			href: String,
+			active: {
+				type: Boolean,
+				value: false
+			}
 		}
-	})
+	}
 </script>

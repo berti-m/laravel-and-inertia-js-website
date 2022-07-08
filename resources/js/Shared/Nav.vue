@@ -17,6 +17,9 @@
 	</nav>
 </template>
 
-<script setup>
+<script>
 	import NavLink from "./NavLink";
+	export default {
+		components: { NavLink }
+	}
 </script>

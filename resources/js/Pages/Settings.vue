@@ -1,10 +1,11 @@
 <template>
-	<Layout>
-		<h1>Settings</h1>
-	</Layout>
+	<h1>Settings</h1>
 	
 </template>
 
-<script setup>
-	import Layout from "../Shared/Layout"
+<script>
+	import Layout from "../Shared/Layout";
+	export default {
+		layout: Layout,
+	}
 </script>

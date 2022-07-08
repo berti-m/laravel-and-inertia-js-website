@@ -4,8 +4,8 @@
 			<span>
 				My App
 			</span>
-			<span class="text-sm" v-if="username() != null">
-				Welcome back, {{ username() }}!
+			<span class="text-sm" v-if="username != null">
+				Welcome back, {{ username }}!
 			</span>
 		</span>
 		<Nav/>
@@ -16,11 +16,14 @@
 	
 </template>
 
-<script setup>
-	import Nav from "../Shared/Nav"
-	import { usePage } from '@inertiajs/inertia-vue3'
-
-	function username(){
-		return usePage().props.value.auth.user.username;
+<script>
+	import Nav from "./Nav"
+	export default {
+		components: { Nav },
+		computed: {
+			username(){
+				return this.$page.props.auth.user.username;
+			}
+		}
 	}
 </script>
