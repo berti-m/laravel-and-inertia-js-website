@@ -1,9 +1,10 @@
 <template>
-	<h1>Users</h1>
-	<Nav/>
+	<Layout>
+		<h1>Users</h1>
+	</Layout>
 	
 </template>
 
 <script setup>
-	import Nav from "../Shared/Nav"
+	import Layout from "../Shared/Layout"
 </script>
