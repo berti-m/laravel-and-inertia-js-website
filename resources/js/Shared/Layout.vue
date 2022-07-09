@@ -1,6 +1,7 @@
 <template>
 	<Head>
 		<meta charset="utf-8" name="description" content="Hello World" head-key="description">
+		<link rel="icon" href="/data/Raspberry_Pi_Logo.svg">
 	</Head>
 
 	<section class="flex p-3 pb-6 bg-gray-200 justify-between text-lg border-b-2 border-black mb-4 items-center">
@@ -11,6 +12,16 @@
 			<div class="text-sm pt-2" v-if="username != null">
 				Welcome back, {{ username }}!
 			</div>
+		</div>
+		<img src="/data/Raspberry_Pi_Logo.svg" class="w-[110px] p-3">
+
+		<div class="grid p-3 border border-gray-500 rounded-xl">
+			<p class="underline font-bold">Uptime info:</p>
+			<ul>
+				<li v-for="data in $page.props.uptime">
+					{{data}}
+				</li>
+			</ul>
 		</div>
 		<Nav/>
 	</section>

@@ -61,4 +61,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/settings/edit', [SettingsController::class, "store"]);
 
     Route::post('/settings/delete', [SettingsController::class, "destroy"]);
+
+    Route::get('/phpsysinfo', function () {
+        return view('phpsysinfo.index');
+    });
 });
