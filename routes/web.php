@@ -45,7 +45,7 @@ Route::get('/users/create', function () {
 Route::post('/users', function () {
     $atr = request()->validate([
         'name' => ['required'],
-        'email' => ['required', 'email'],
+        'email' => ['required', 'email', 'unique:users,email'],
         'password' => ['required', 'min:7', 'max:200']
     ]);
     User::create($atr);
