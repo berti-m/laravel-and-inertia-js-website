@@ -37,6 +37,7 @@
 	import Paginate from "@/Shared/Paginate"
 	import { ref, watch } from "vue"
 	import { Inertia } from '@inertiajs/inertia'
+	import debounce from "lodash/debounce"
 	let props = defineProps({
 		users: Object,
 		requests: Object
@@ -44,7 +45,7 @@
 	let style = "p-3 border border-gray-200";
 	let search = ref(props.requests.search);
 
-	watch(search, value => {
+	watch(search, debounce(function(value) {
 		if (value){
 			Inertia.get("/users", {search: value}, {
 				preserveState: true,
@@ -56,5 +57,5 @@
 				replace: true
 			})
 		}
-	});
+	}, 500));
 </script>

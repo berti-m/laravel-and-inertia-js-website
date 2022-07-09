@@ -14,6 +14,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Shared_Paginate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Shared/Paginate */ "./resources/js/Shared/Paginate.vue");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
+/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -29,7 +32,7 @@ __webpack_require__.r(__webpack_exports__);
     var props = __props;
     var style = "p-3 border border-gray-200";
     var search = (0,vue__WEBPACK_IMPORTED_MODULE_1__.ref)(props.requests.search);
-    (0,vue__WEBPACK_IMPORTED_MODULE_1__.watch)(search, function (value) {
+    (0,vue__WEBPACK_IMPORTED_MODULE_1__.watch)(search, lodash_debounce__WEBPACK_IMPORTED_MODULE_3___default()(function (value) {
       if (value) {
         _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.get("/users", {
           search: value
@@ -43,7 +46,7 @@ __webpack_require__.r(__webpack_exports__);
           replace: true
         });
       }
-    });
+    }, 500));
     var __returned__ = {
       props: props,
       style: style,
@@ -51,7 +54,8 @@ __webpack_require__.r(__webpack_exports__);
       Paginate: _Shared_Paginate__WEBPACK_IMPORTED_MODULE_0__["default"],
       ref: vue__WEBPACK_IMPORTED_MODULE_1__.ref,
       watch: vue__WEBPACK_IMPORTED_MODULE_1__.watch,
-      Inertia: _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia
+      Inertia: _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia,
+      debounce: (lodash_debounce__WEBPACK_IMPORTED_MODULE_3___default())
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
