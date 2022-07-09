@@ -2,15 +2,15 @@
 	<Head>
 		<meta charset="utf-8" name="description" content="Hello World" head-key="description">
 	</Head>
-	<section class="flex p-3 rounded-lg bg-gray-200 justify-between text-lg border border-black mb-4">
-		<span class="flex items-center space-x-4">
-			<span>
+	<section class="flex p-3 pb-6 bg-gray-200 justify-between text-lg border-b-2 border-black mb-4 items-center">
+		<div class="grid grid-cols-1 divide-y divide-gray-400">
+			<div class="text-3xl font-bold pb-2">
 				My App
-			</span>
-			<span class="text-sm" v-if="username != null">
+			</div>
+			<div class="text-sm pt-2" v-if="username != null">
 				Welcome back, {{ username }}!
-			</span>
-		</span>
+			</div>
+		</div>
 		<Nav/>
 	</section>
 	<section class="p-3 grid justify-center">

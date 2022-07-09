@@ -1,0 +1,66 @@
+<template>
+	<Head>
+		<title>Login</title>
+	</Head>
+
+	<main class="grid place-items-center min-h-screen">
+		<div class="grid justify-items-center">
+			<h1 class="text-3xl">Login</h1>
+
+			<form @submit.prevent="submit" class="w-max-md mx-auto space-y-6 mt-6 border p-6 rounded-md bg-gray-200 divide-y-2">
+				<div class="flex p-3 items-center justify-end space-x-4">
+					<label for="email">Email:</label>
+					<div>
+						<input v-model="user.email" type="text" name="email" placeholder="Enter your email" class="p-2 border rounded-xl">
+						<div v-if="$page.props.errors.email" v-text="$page.props.errors.email" class="mt-2 text-red-700 underline text-xs"/>
+					</div>
+				</div>
+
+				<div class="flex p-3 items-center justify-end space-x-4">
+					<label for="password">Password:</label>
+					<div>
+						<input v-model="user.password" type="password" name="password" placeholder="Enter your password" class="p-2 border rounded-xl">
+						<div v-if="$page.props.errors.password" v-text="$page.props.errors.password" class="mt-2 text-red-700 underline text-xs"/>
+					</div>
+				</div>
+
+				<div class="flex items-center justify-center pb-6">
+					<button type="submit" 
+					class="px-6 py-3 font-semibold rounded-xl text-white" 
+					:class="{
+						'bg-blue-700 hover:bg-blue-900': !processing,
+						'bg-gray-500': processing
+					}"
+					:disabled="processing">Log In</button>
+				</div>
+			</form>
+		</div>
+	</main>
+	
+</template>
+
+<script>
+	export default {
+		layout: ""
+	};
+</script>
+
+<script setup>
+	import { reactive, ref } from "vue"
+	import { Inertia } from '@inertiajs/inertia'
+	let user = reactive({
+		email: "",
+		password: ""
+	})
+	let processing = ref(false);
+	function submit(){
+		Inertia.post('/login/user', user, {
+			onStart: () => {
+				processing.value = true;
+			},
+			onFinish: () => {
+				processing.value = false;
+			}
+		})
+	}
+</script>

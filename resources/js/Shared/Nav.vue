@@ -11,7 +11,7 @@
 				Settings
 			</NavLink>
 			<li>
-				<Link href="/logout" method="post" as="button" :data="{ foo: 'bar' }" class="text-red-500 hover:underline">Log Out</Link>
+				<Link href="/logout" method="post" as="button" class="text-red-500 hover:underline">Log Out</Link>
 			</li>
 		</ul>
 	</nav>

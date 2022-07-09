@@ -94,19 +94,21 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 );
 
 var _hoisted_2 = {
-  "class": "flex p-3 rounded-lg bg-gray-200 justify-between text-lg border border-black mb-4"
+  "class": "flex p-3 pb-6 bg-gray-200 justify-between text-lg border-b-2 border-black mb-4 items-center"
 };
 var _hoisted_3 = {
-  "class": "flex items-center space-x-4"
+  "class": "grid grid-cols-1 divide-y divide-gray-400"
 };
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, " My App ", -1
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "text-3xl font-bold pb-2"
+}, " My App ", -1
 /* HOISTED */
 );
 
 var _hoisted_5 = {
   key: 0,
-  "class": "text-sm"
+  "class": "text-sm pt-2"
 };
 var _hoisted_6 = {
   "class": "p-3 grid justify-center"
@@ -123,7 +125,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_3, [_hoisted_4, $options.username != null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_5, " Welcome back, " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.username) + "! ", 1
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, $options.username != null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_5, " Welcome back, " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.username) + "! ", 1
   /* TEXT */
   )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Nav)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])], 64
   /* STABLE_FRAGMENT */
@@ -202,9 +204,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     href: "/logout",
     method: "post",
     as: "button",
-    data: {
-      foo: 'bar'
-    },
     "class": "text-red-500 hover:underline"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -283,8 +282,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__.createInertiaApp)({
   resolve: function () {
     var _resolve = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(name) {
-      var _page$layout;
-
       var page;
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) {
@@ -295,10 +292,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
             case 2:
               page = _context.sent["default"];
-              (_page$layout = page.layout) !== null && _page$layout !== void 0 ? _page$layout : page.layout = _Shared_Layout__WEBPACK_IMPORTED_MODULE_4__["default"];
+              console.log(page.layout != "");
+
+              if (page.layout != "") {
+                page.layout = _Shared_Layout__WEBPACK_IMPORTED_MODULE_4__["default"];
+              }
+
               return _context.abrupt("return", page);
 
-            case 5:
+            case 6:
             case "end":
               return _context.stop();
           }
@@ -585,6 +587,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./Auth/Index": [
+		"./resources/js/Pages/Auth/Index.vue",
+		"resources_js_Pages_Auth_Index_vue"
+	],
+	"./Auth/Index.vue": [
+		"./resources/js/Pages/Auth/Index.vue",
+		"resources_js_Pages_Auth_Index_vue"
+	],
 	"./Home": [
 		"./resources/js/Pages/Home.vue",
 		"resources_js_Pages_Home_vue"
