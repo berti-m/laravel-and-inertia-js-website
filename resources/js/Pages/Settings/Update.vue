@@ -1,9 +1,9 @@
 <template>
 	<Head>
-		<title>New User</title>
+		<title>Edit User {{props.user.name}}</title>
 	</Head>
 	
-	<h1 class="text-3xl">New User</h1>
+	<h1 class="text-3xl">Edit User {{props.user.name}}</h1>
 
 	<form @submit.prevent="submit" class="w-max-md mx-auto space-y-6 mt-6 border rounded-md bg-gray-200 divide-y-2">
 		<div class="flex p-3 pt-6 items-center justify-end space-x-4">
@@ -25,16 +25,8 @@
 		<div class="flex p-3 items-center justify-end space-x-4">
 			<label for="password">Password:</label>
 			<div>
-				<input v-model="new_user.password" type="password" name="password" placeholder="Enter your password" class="p-2 border rounded-xl">
+				<input v-model="new_user.password" type="password" name="password" placeholder="If you want enter new password" class="p-2 border rounded-xl">
 				<div v-if="$page.props.errors.password" v-text="$page.props.errors.password" class="mt-2 text-red-700 underline text-xs"/>
-			</div>
-		</div>
-
-		<div class="flex p-3 items-center justify-end space-x-4">
-			<label for="admin">Admin:</label>
-			<div>
-				<input v-model="new_user.admin" type="checkbox" name="admin" class="p-2 border rounded-xl">
-				<div v-if="$page.props.errors.admin" v-text="$page.props.errors.admin" class="mt-2 text-red-700 underline text-xs"/>
 			</div>
 		</div>
 
@@ -53,20 +45,19 @@
 </template>
 
 <script setup>
-	import Paginate from "@/Shared/Paginate"
 	import { reactive, ref } from "vue"
 	import { Inertia } from '@inertiajs/inertia'
 	let props = defineProps({
+		user: Object
 	})
 	let new_user = reactive({
-		name: "",
-		email: "",
-		password: "",
-		admin: false
+		name: props.user.name,
+		email: props.user.email,
+		password: ""
 	})
 	let processing = ref(false);
 	function submit(){
-		Inertia.post('/users/create', new_user, {
+		Inertia.post('/settings/edit', new_user, {
 			onStart: () => {
 				processing.value = true;
 			},

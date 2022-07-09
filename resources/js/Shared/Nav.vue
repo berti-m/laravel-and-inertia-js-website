@@ -4,7 +4,7 @@
 			<NavLink href="/" :active="$page.component == 'Home'">
 				Home
 			</NavLink>
-			<NavLink href="/users" :active="$page.component == 'Users'">
+			<NavLink href="/users" :active="$page.component == 'Users/Index'">
 				Users
 			</NavLink>
 			<NavLink href="/settings" :active="$page.component == 'Settings'">

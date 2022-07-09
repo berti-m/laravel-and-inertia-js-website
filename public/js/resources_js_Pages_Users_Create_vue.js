@@ -33,7 +33,7 @@ __webpack_require__.r(__webpack_exports__);
     var processing = (0,vue__WEBPACK_IMPORTED_MODULE_1__.ref)(false);
 
     function submit() {
-      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.post('/users', new_user, {
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.post('/users/create', new_user, {
         onStart: function onStart() {
           processing.value = true;
         },

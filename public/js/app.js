@@ -182,7 +182,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_NavLink, {
     href: "/users",
-    active: _ctx.$page.component == 'Users'
+    active: _ctx.$page.component == 'Users/Index'
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_3];
@@ -606,13 +606,21 @@ var map = {
 		"./resources/js/Pages/Home.vue",
 		"resources_js_Pages_Home_vue"
 	],
-	"./Settings": [
-		"./resources/js/Pages/Settings.vue",
-		"resources_js_Pages_Settings_vue"
+	"./Settings/Index": [
+		"./resources/js/Pages/Settings/Index.vue",
+		"resources_js_Pages_Settings_Index_vue"
 	],
-	"./Settings.vue": [
-		"./resources/js/Pages/Settings.vue",
-		"resources_js_Pages_Settings_vue"
+	"./Settings/Index.vue": [
+		"./resources/js/Pages/Settings/Index.vue",
+		"resources_js_Pages_Settings_Index_vue"
+	],
+	"./Settings/Update": [
+		"./resources/js/Pages/Settings/Update.vue",
+		"resources_js_Pages_Settings_Update_vue"
+	],
+	"./Settings/Update.vue": [
+		"./resources/js/Pages/Settings/Update.vue",
+		"resources_js_Pages_Settings_Update_vue"
 	],
 	"./Users/Create": [
 		"./resources/js/Pages/Users/Create.vue",
