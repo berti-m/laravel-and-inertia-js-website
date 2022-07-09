@@ -127,7 +127,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, $options.username != null ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_5, " Welcome back, " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.username) + "! ", 1
   /* TEXT */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Nav)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])], 64
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Nav)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "bg-blue-600 text-white font-bold font-larger p-3 rounded-xl bottom-3 right-3 fixed text-2xl"
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.flash.message), 513
+  /* TEXT, NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, _ctx.$page.props.flash.message]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -292,7 +296,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
             case 2:
               page = _context.sent["default"];
-              console.log(page.layout != "");
 
               if (page.layout != "") {
                 page.layout = _Shared_Layout__WEBPACK_IMPORTED_MODULE_4__["default"];
@@ -300,7 +303,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               return _context.abrupt("return", page);
 
-            case 6:
+            case 5:
             case "end":
               return _context.stop();
           }
@@ -628,6 +631,14 @@ var map = {
 		"./resources/js/Pages/Users/Index.vue",
 		"/js/vendor",
 		"resources_js_Pages_Users_Index_vue"
+	],
+	"./Users/Update": [
+		"./resources/js/Pages/Users/Update.vue",
+		"resources_js_Pages_Users_Update_vue"
+	],
+	"./Users/Update.vue": [
+		"./resources/js/Pages/Users/Update.vue",
+		"resources_js_Pages_Users_Update_vue"
 	]
 };
 function webpackAsyncContext(req) {

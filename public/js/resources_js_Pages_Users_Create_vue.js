@@ -27,7 +27,8 @@ __webpack_require__.r(__webpack_exports__);
     var new_user = (0,vue__WEBPACK_IMPORTED_MODULE_1__.reactive)({
       name: "",
       email: "",
-      password: ""
+      password: "",
+      admin: false
     });
     var processing = (0,vue__WEBPACK_IMPORTED_MODULE_1__.ref)(false);
 
@@ -149,9 +150,20 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 
 var _hoisted_12 = ["textContent"];
 var _hoisted_13 = {
+  "class": "flex p-3 items-center justify-end space-x-4"
+};
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "admin"
+}, "Admin:", -1
+/* HOISTED */
+);
+
+var _hoisted_15 = ["textContent"];
+var _hoisted_16 = {
   "class": "flex items-center justify-center pb-6"
 };
-var _hoisted_14 = ["disabled"];
+var _hoisted_17 = ["disabled"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
 
@@ -213,7 +225,22 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "mt-2 text-red-700 underline text-xs"
   }, null, 8
   /* PROPS */
-  , _hoisted_12)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  , _hoisted_12)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
+      return $setup.new_user.admin = $event;
+    }),
+    type: "checkbox",
+    name: "admin",
+    "class": "p-2 border rounded-xl"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $setup.new_user.admin]]), _ctx.$page.props.errors.admin ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+    key: 0,
+    textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.errors.admin),
+    "class": "mt-2 text-red-700 underline text-xs"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_15)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     type: "submit",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["px-6 py-3 font-semibold rounded-xl text-white", {
       'bg-blue-700 hover:bg-blue-900': !$setup.processing,
@@ -222,7 +249,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     disabled: $setup.processing
   }, "Submit", 10
   /* CLASS, PROPS */
-  , _hoisted_14)])], 40
+  , _hoisted_17)])], 40
   /* PROPS, HYDRATE_EVENTS */
   , _hoisted_3)], 64
   /* STABLE_FRAGMENT */

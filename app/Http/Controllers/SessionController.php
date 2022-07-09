@@ -21,7 +21,7 @@ class SessionController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
  
-            return redirect()->intended();
+            return redirect()->intended()->with('message', 'Welcome!');
         }
  
         return back()->withErrors([
@@ -32,6 +32,6 @@ class SessionController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('/')->with('message', 'Goodbye!');
     }
 }

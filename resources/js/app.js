@@ -8,7 +8,6 @@ import Layout from "./Shared/Layout";
 createInertiaApp({
   resolve: async name => {
     let page = (await import(`./Pages/${name}`)).default;
-    console.log(page.layout != "");
     if (page.layout != ""){
       page.layout = Layout;
     }
