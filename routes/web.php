@@ -21,12 +21,20 @@ Route::get('/', function () {
 
 Route::get('/users', function () {
     return Inertia::render('Users', [
-        'users' => User::paginate(10)->through(function($user){
-            return ['name' => $user->name,
-                    'email' => $user->email,
-                    'id' => $user->id
-            ];
-        })
+        'users' => User::query()
+                        ->when(request('search'), function ($query, $search){
+                            $query->where('name', 'like', '%'.$search.'%')->orWhere('email', 'like', '%'.$search.'%');
+                        })
+                        ->paginate(10)
+                        ->withQueryString()
+                        ->through(function($user){
+                            return ['name' => $user->name,
+                                    'email' => $user->email,
+                                    'id' => $user->id
+                            ];
+                        }),
+
+        'requests' => request(['search'])
     ]);
 });
 

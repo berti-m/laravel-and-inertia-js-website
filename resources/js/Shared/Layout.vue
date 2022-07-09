@@ -13,7 +13,7 @@
 		</span>
 		<Nav/>
 	</section>
-	<section class="p-3">
+	<section class="p-3 grid justify-center">
 		<slot/>
 	</section>
 	

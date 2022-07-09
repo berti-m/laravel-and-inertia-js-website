@@ -109,7 +109,7 @@ var _hoisted_5 = {
   "class": "text-sm"
 };
 var _hoisted_6 = {
-  "class": "p-3"
+  "class": "p-3 grid justify-center"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
