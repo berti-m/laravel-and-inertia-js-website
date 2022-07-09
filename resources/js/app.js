@@ -20,7 +20,7 @@ createInertiaApp({
       .use(plugin)
       .mount(el)
   },
-  title: title => "My App - " + title,
+  title: title => "Malina143 - " + title,
 })
 
 import { InertiaProgress } from '@inertiajs/progress'

@@ -102,7 +102,7 @@ var _hoisted_3 = {
 
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "text-3xl font-bold pb-2"
-}, " My App ", -1
+}, " Malina143 ", -1
 /* HOISTED */
 );
 
@@ -194,7 +194,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_NavLink, {
     href: "/settings",
-    active: _ctx.$page.component == 'Settings'
+    active: _ctx.$page.component == 'Settings/Index'
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_4];
@@ -329,7 +329,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }).component('Link', _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__.Link).component('Head', _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__.Head).use(plugin).mount(el);
   },
   title: function title(_title) {
-    return "My App - " + _title;
+    return "Malina143 - " + _title;
   }
 });
 

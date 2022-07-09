@@ -6,7 +6,7 @@
 	<section class="flex p-3 pb-6 bg-gray-200 justify-between text-lg border-b-2 border-black mb-4 items-center">
 		<div class="grid grid-cols-1 divide-y divide-gray-400">
 			<div class="text-3xl font-bold pb-2">
-				My App
+				Malina143
 			</div>
 			<div class="text-sm pt-2" v-if="username != null">
 				Welcome back, {{ username }}!
