@@ -29,18 +29,27 @@ __webpack_require__.r(__webpack_exports__);
       email: "",
       password: ""
     });
+    var processing = (0,vue__WEBPACK_IMPORTED_MODULE_1__.ref)(false);
 
     function submit() {
-      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.post('/users', new_user);
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.post('/users', new_user, {
+        onStart: function onStart() {
+          processing.value = true;
+        },
+        onFinish: function onFinish() {
+          processing.value = false;
+        }
+      });
     }
 
     var __returned__ = {
       props: props,
       new_user: new_user,
+      processing: processing,
       submit: submit,
       Paginate: _Shared_Paginate__WEBPACK_IMPORTED_MODULE_0__["default"],
       reactive: vue__WEBPACK_IMPORTED_MODULE_1__.reactive,
-      watch: vue__WEBPACK_IMPORTED_MODULE_1__.watch,
+      ref: vue__WEBPACK_IMPORTED_MODULE_1__.ref,
       Inertia: _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
@@ -139,16 +148,10 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 );
 
 var _hoisted_12 = ["textContent"];
-
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_13 = {
   "class": "flex items-center justify-center pb-6"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  type: "submit",
-  "class": "px-6 py-3 bg-blue-700 text-white hover:bg-blue-900 font-semibold rounded-xl"
-}, "Submit")], -1
-/* HOISTED */
-);
-
+};
+var _hoisted_14 = ["disabled"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
 
@@ -210,7 +213,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "mt-2 text-red-700 underline text-xs"
   }, null, 8
   /* PROPS */
-  , _hoisted_12)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), _hoisted_13], 40
+  , _hoisted_12)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    type: "submit",
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["px-6 py-3 font-semibold rounded-xl text-white", {
+      'bg-blue-700 hover:bg-blue-900': !$setup.processing,
+      'bg-gray-500': $setup.processing
+    }]),
+    disabled: $setup.processing
+  }, "Submit", 10
+  /* CLASS, PROPS */
+  , _hoisted_14)])], 40
   /* PROPS, HYDRATE_EVENTS */
   , _hoisted_3)], 64
   /* STABLE_FRAGMENT */

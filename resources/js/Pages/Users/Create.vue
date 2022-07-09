@@ -31,7 +31,13 @@
 		</div>
 
 		<div class="flex items-center justify-center pb-6">
-			<button type="submit" class="px-6 py-3 bg-blue-700 text-white hover:bg-blue-900 font-semibold rounded-xl">Submit</button>
+			<button type="submit" 
+			class="px-6 py-3 font-semibold rounded-xl text-white" 
+			:class="{
+				'bg-blue-700 hover:bg-blue-900': !processing,
+				'bg-gray-500': processing
+			}"
+			:disabled="processing">Submit</button>
 		</div>
 
 	</form>
@@ -40,7 +46,7 @@
 
 <script setup>
 	import Paginate from "@/Shared/Paginate"
-	import { reactive, watch } from "vue"
+	import { reactive, ref } from "vue"
 	import { Inertia } from '@inertiajs/inertia'
 	let props = defineProps({
 	})
@@ -49,7 +55,15 @@
 		email: "",
 		password: ""
 	})
+	let processing = ref(false);
 	function submit(){
-		Inertia.post('/users', new_user)
+		Inertia.post('/users', new_user, {
+			onStart: () => {
+				processing.value = true;
+			},
+			onFinish: () => {
+				processing.value = false;
+			}
+		})
 	}
 </script>
