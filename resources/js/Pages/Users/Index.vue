@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-	import Paginate from "./../Shared/Paginate"
+	import Paginate from "@/Shared/Paginate"
 	import { ref, watch } from "vue"
 	import { Inertia } from '@inertiajs/inertia'
 	let props = defineProps({

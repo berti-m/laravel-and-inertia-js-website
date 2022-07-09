@@ -11,11 +11,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Nav */ "./resources/js/Shared/Nav.vue");
+/* harmony import */ var _Shared_Nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Shared/Nav */ "./resources/js/Shared/Nav.vue");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    Nav: _Nav__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Nav: _Shared_Nav__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   computed: {
     username: function username() {
@@ -37,11 +37,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NavLink */ "./resources/js/Shared/NavLink.vue");
+/* harmony import */ var _Shared_NavLink__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Shared/NavLink */ "./resources/js/Shared/NavLink.vue");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    NavLink: _NavLink__WEBPACK_IMPORTED_MODULE_0__["default"]
+    NavLink: _Shared_NavLink__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -601,13 +601,21 @@ var map = {
 		"./resources/js/Pages/Settings.vue",
 		"resources_js_Pages_Settings_vue"
 	],
-	"./Users": [
-		"./resources/js/Pages/Users.vue",
-		"resources_js_Pages_Users_vue"
+	"./Users/Create": [
+		"./resources/js/Pages/Users/Create.vue",
+		"resources_js_Pages_Users_Create_vue"
 	],
-	"./Users.vue": [
-		"./resources/js/Pages/Users.vue",
-		"resources_js_Pages_Users_vue"
+	"./Users/Create.vue": [
+		"./resources/js/Pages/Users/Create.vue",
+		"resources_js_Pages_Users_Create_vue"
+	],
+	"./Users/Index": [
+		"./resources/js/Pages/Users/Index.vue",
+		"resources_js_Pages_Users_Index_vue"
+	],
+	"./Users/Index.vue": [
+		"./resources/js/Pages/Users/Index.vue",
+		"resources_js_Pages_Users_Index_vue"
 	]
 };
 function webpackAsyncContext(req) {

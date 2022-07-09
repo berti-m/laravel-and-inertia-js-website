@@ -18,7 +18,7 @@
 </template>
 
 <script>
-	import NavLink from "./NavLink";
+	import NavLink from "@/Shared/NavLink";
 	export default {
 		components: { NavLink }
 	}
