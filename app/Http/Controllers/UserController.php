@@ -49,7 +49,7 @@ class UserController extends Controller
 
     public function store(User $user){
         if (auth()->user()->canNot('update', $user)){
-            abort(403);
+            return back()->with('message', 'Forbidden');
         }
         $atr = request();
         $atr->validate([
@@ -71,7 +71,7 @@ class UserController extends Controller
 
     public function destroy(User $user){
         if (auth()->user()->canNot('delete', $user)){
-            abort(403);
+            return back()->with('message', 'Forbidden');
         }
         $user->delete();
         return redirect('/users')->with('message', 'Success!');

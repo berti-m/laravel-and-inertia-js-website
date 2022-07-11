@@ -5,14 +5,14 @@
 	</Head>
 
 	<section class="flex p-3 pb-6 bg-gray-200 justify-between text-lg border-b-2 border-black mb-4 items-center">
-		<div class="grid grid-cols-1 divide-y divide-gray-400">
+		<Link href="/" class="grid grid-cols-1 divide-y divide-gray-400">
 			<div class="text-3xl font-bold pb-2">
 				Malina143
 			</div>
 			<div class="text-sm pt-2" v-if="username != null">
 				Welcome back, {{ username }}!
 			</div>
-		</div>
+		</Link>
 		<img src="/data/Raspberry_Pi_Logo.svg" class="w-[110px] p-3">
 
 		<div class="grid p-3 border border-gray-500 rounded-xl">
